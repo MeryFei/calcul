@@ -27,13 +27,26 @@
         </div>
         <div class="card">
             <p>please enter your name to start using the calculator</p>
-            <form action="">
-                    <input type="text" placeholder="Enter Your Name" required>
-                    <a href="content.html"><input type="button" value="Enter"></a>
+            <form action="" id="userForm">
+                    <input id="username" type="text" placeholder="Enter Your Name" >
+                    <input type="submit" value="Enter">
                     <!-- <input type="button" value="Enter"> -->
             </form>
             </div>
        </div>
     </div>
+
+    <script>
+        document.getElementById('userForm').addEventListener("submit",function(event) {
+            event.preventDefault(); //Empêche le rechargement de la page par défaut
+
+            var username = document.getElementById('username').value;
+            console.log(username);
+
+            //redirection
+            window.location.href = "content.html?username="+ encodeURIComponent(username);
+        });
+
+    </script>
 </body>
 </html>

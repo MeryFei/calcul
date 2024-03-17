@@ -19,30 +19,33 @@
     <div class="content">
        <div class="container">
             <div class="heading">
-                <h2>Here Fell Free To Use Our Calculator</h2>
+                <h2 id="wlcm">Welcome </h2>
+                <h2>Fell Free To Use Our Calculator</h2>
             </div>
-            <div class="card">
+            <div class="card" id="calculator">
                 <div class="result">
-                    <input type="text">
+                    <input type="text" id="display"  readonly>
                 </div>
-                <div class="buttons">
-                    <button type="button" class="func"><i class="fa-solid fa-plus"></i></button>
-                    <button type="button">7</button>
-                    <button type="button">8</button>
-                    <button type="button">9</button>
-                    <button type="button" class="func"><i class="fa-solid fa-minus"></i></button>
-                    <button type="button">4</button>
-                    <button type="button">5</button>
-                    <button type="button">6</button>
-                    <button type="button" class="func"><i class="fa-solid fa-xmark"></i></button>
-                    <button type="button">1</button>
-                    <button type="button">2</button>
-                    <button type="button">3</button>
-                    <button type="button" class="func"><i class="fa-solid fa-divide"></i></button>
-                    <button type="button">0</button>
-                    <button type="button">,</button>
-                    <button type="button" class="func"><i class="fa-solid fa-equals"></i></button>
-                    <button type="button" class="func">reset</button>
+                <div class="buttons" id="keys">
+                    <button onclick="Display('+')" type="button" class="func"><i class="fa-solid fa-plus"></i></button>
+                    <button onclick="Display('7')" type="button">7</button>
+                    <button onclick="Display('8')" type="button">8</button>
+                    <button onclick="Display('9')" type="button">9</button>
+                    <button onclick="Display('-')" type="button" class="func"><i class="fa-solid fa-minus"></i></button>
+                    <button onclick="Display('4')" type="button">4</button>
+                    <button onclick="Display('5')" type="button">5</button>
+                    <button onclick="Display('6')" type="button">6</button> 
+                    <button onclick="Display('*')" type="button" class="func"><i class="fa-solid fa-xmark"></i></button>
+                    <button onclick="Display('1')" type="button">1</button>
+                    <button onclick="Display('2')" type="button">2</button>
+                    <button onclick="Display('3')" type="button">3</button>
+                    <button onclick="Display('/')" type="button" class="func"><i class="fa-solid fa-divide"></i></button>
+                    <button onclick="Display('0')" type="button">0</button>
+                    <button onclick="Display('.')" type="button">,</button>
+                    <button onclick="calculate()" type="button" class="func"><i class="fa-solid fa-equals"></i></button>
+                    <button onclick="reset()" type="button" class="func">reset</button>
+
+                    <script src="script.js"></script>
                 </div>
             </div>
        </div>
